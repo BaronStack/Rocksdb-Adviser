@@ -4,16 +4,16 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="Rocksdb-Adviser", # Replace with your own username
+    name="Adviser-Rocksdb", # Replace with your own username
     version="0.0.1",
     author="Example Author",
     author_email="author@example.com",
-    description="A small example package",
+    description="Rocksdb's log analyzer",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/BaronStack/Rocksdb-Adviser.git",
     project_urls={
-        "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
+        "Bug Tracker": "https://github.com/BaronStack/Rocksdb-Adviser/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
