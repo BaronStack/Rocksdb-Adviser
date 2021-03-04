@@ -36,12 +36,16 @@ set bloom_bits to 2 etc.
 The tool needs the following to run:
 * python3
 
+### Install
+```shell script
+pip3 install Adviser-Rocksdb
+```
+
 ### Running the tool
 An example command to run the tool:
 
 ```shell
-cd rocksdb/tools/advisor
-python3 -m advisor.rule_parser_example --rules_spec=advisor/rules.ini --rocksdb_options=test/input_files/OPTIONS-000005 --log_files_path_prefix=test/input_files/LOG-0 --stats_dump_period_sec=20
+python3 -m advisor.rule_parser_example --rules_spec=rules.ini --rocksdb_options=OPTIONS-000005 --log_files_path_prefix=LOG-0 --stats_dump_period_sec=20
 ```
 
 ### Command-line arguments
@@ -67,7 +71,6 @@ or [perf context](https://github.com/facebook/rocksdb/blob/master/include/rocksd
 For more information about the remaining command-line arguments, run:
 
 ```shell
-cd rocksdb/tools/advisor
 python3 -m advisor.rule_parser_example --help
 ```
 
@@ -91,6 +94,5 @@ Tests for the code have been added to the
 directory. For example, to run the unit tests for db_log_parser.py:
 
 ```shell
-cd rocksdb/tools/advisor
-python3 -m unittest -v test.test_db_log_parser
+python3 -m unittest -v tests.test_db_log_parser
 ```
