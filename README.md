@@ -44,6 +44,9 @@ pip3 install Adviser-Rocksdb
 ### Running the tool
 An example command to run the tool:
 
+Before run the tool, you need to get a file `rules.ini` from [rules.in file](https://github.com/BaronStack/Rocksdb-Adviser/blob/master/advisor/rules.ini).
+And then, you can run the command below with rocksdb-option file in your db directory, rocksdb-log file in your db director 
+
 ```shell
 python3 -m advisor.rule_parser_example --rules_spec=rules.ini --rocksdb_options=OPTIONS-000005 --log_files_path_prefix=LOG-0 --stats_dump_period_sec=20
 ```
@@ -69,7 +72,6 @@ Rocksdb [statistics](https://github.com/facebook/rocksdb/blob/master/include/roc
 or [perf context](https://github.com/facebook/rocksdb/blob/master/include/rocksdb/perf_context.h).
 
 For more information about the remaining command-line arguments, run:
-
 ```shell
 python3 -m advisor.rule_parser_example --help
 ```
